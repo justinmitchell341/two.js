@@ -14,7 +14,7 @@ const two = new Two(params);
 // append to `container`
 two.appendTo(container);
 // Draw Shape
-
+const TWO_PI = Math.PI * 2;
 let shape = two.makeRectangle(500, 500, 1000, 1000);
 let shape1 = two.makeRectangle(500, 500, 500, 500);
 let shape2 = two.makeRectangle(500, 500, 500, 500);
@@ -38,7 +38,7 @@ shape3.fill="9D7300"
 shape.noStroke();
 // rotate shape. Default is radians
 shape2.rotation = Math.PI * 0.25;
-
+allCircles.rotation = Math.Pi * .55;
 // Bind to "Update" function
 two.bind("update", () => {
   shape1.rotation += 0.005;
@@ -52,6 +52,8 @@ two.bind("update", () => {
 // two.bind("update", () => {
 //     allCircles.rotation += 0.005;
 //     });
+allCircles.rotation += (TWO_PI - allCircles.rotation) * 0.0625;
+allCircles.rotation = 0;
 function generate(elapsed) {
 
     var circle = two.scene.children[0];
