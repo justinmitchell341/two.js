@@ -1,4 +1,14 @@
-/*  Styling */ 
-body{
-    background-color: slategray;
-}
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  section {
+    background: lightgray;
+  }
+  /* gradient for dr strange symbols background: rgb(241,224,180);
+background: linear-gradient(90deg, rgba(241,224,180,1) 0%, 
+rgba(206,153,9,1) 23%, rgba(204,150,2,1) 58%, rgba(91,20,2,1) 100%); */
