@@ -3,6 +3,7 @@
 // Get drawing for drawing
 const container = document.querySelector("section");
 
+
 // Set parameters for container
 let params = {
   width: 1000,
@@ -27,13 +28,17 @@ let circle5 = two.makeCircle(667, 650, 25);
 let circle6 = two.makeCircle(730, 500, 25);
 let circle7 = two.makeCircle(670, 350, 25);
 let circle9 = two.makeCircle(500, 270, 25);
+let square = two.makeRectangle(500, 500, 100, 100);
 allCircles = two.makeGroup(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle9);
+circleAndSquare = two.makeGroup(shape3, square);
 console.log(allCircles);
 // PROPERTY: set fill to red
 shape.fill = 'black';
 shape1.fill = "#CC9602";
 shape2.fill = "#CC9602";
-shape3.fill="9D7300"
+allCircles.fill = "#9D7300";
+shape3.fill= "black";
+square.fill = '#9D7300';
 // METHOD: run method to remove stroke
 shape.noStroke();
 // rotate shape. Default is radians
@@ -47,7 +52,7 @@ two.bind("update", () => {
     shape2.rotation += -0.005;
   });
 two.bind("update", () => {
-    shape3.rotation += 0.005;
+    square.rotation += 0.02;
     });
 // two.bind("update", () => {
 //     allCircles.rotation += 0.005;
